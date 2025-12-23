@@ -1,0 +1,40 @@
+{
+  "functions": {
+    "source": "functions"
+  },
+  "hosting": {
+    "public": "web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "PDM_Material/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "**/*.css",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=3600"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/gemini",
+        "function": "geminiProxy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BCM Personified Decision Model Platform</title>
+  <meta name="description" content="Overview of the BCM Personified Decision Model platform, multi-phase roadmap, and seven AI commander profiles.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="top-nav">
+      <a class="brand" href="#top">BCM PDM System</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <ul class="nav-links" id="site-nav">
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#interactions">Interactions</a></li>
+        <li><a href="#personas">Commanders</a></li>
+        <li><a href="#gemini">Gemini Console</a></li>
+      </ul>
+    </nav>
+    <div class="hero-body">
+      <div class="hero-copy">
+        <p class="eyebrow">Personified Decision Model Platform</p>
+        <h1>Discipline, memory, and multi-agent coordination for BCM founders.</h1>
+        <p class="lede">Seven specialized AI commanders coordinate strategy, sales, training, research, tone, and public stance. This build aligns with the official BCM doctrines and now routes battlefield requests through a Gemini serverless proxy (Vercel today, Firebase Functions pending IAM updates).</p>
+        <div class="hero-actions">
+          <a class="btn" href="#personas">Meet the commanders</a>
+          <a class="btn ghost" href="#roadmap">See the build plan</a>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <p class="hero-highlight">"Owners do not just ask for answers — they shape the battlefield by choosing who hears the order first."</p>
+        <p class="hero-caption">— Interaction Framework, BCM PDM Stack</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="roadmap" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Phase Roadmap</p>
+        <h2>Seven-phase build sequence</h2>
+        <p class="section-lede">The PDM platform moves from foundational doctrine reviews through multi-agent orchestration, research automation, and long-term handover.</p>
+      </div>
+      <div class="timeline" id="roadmap-timeline"></div>
+    </section>
+
+    <section id="stack" class="section alt">
+      <div class="section-head">
+        <p class="eyebrow">Core Stack</p>
+        <h2>Modules, safeguards, and performance layers</h2>
+        <p class="section-lede">Each module honors BCM’s mandates for profile accuracy, ethical guardrails, tone fidelity, and battle-tested performance.</p>
+      </div>
+      <div class="grid" id="stack-modules"></div>
+    </section>
+
+    <section id="interactions" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Interaction Doctrine</p>
+        <h2>How owners, staff, and PDMs exchange intelligence</h2>
+        <p class="section-lede">The order of contact shapes the outcome. Input channels, battle sequencing, and role clarity keep the system aligned.</p>
+      </div>
+      <div class="interaction-grid">
+        <article class="interaction-card">
+          <h3>Owner input channels</h3>
+          <ul id="owner-inputs"></ul>
+        </article>
+        <article class="interaction-card">
+          <h3>Sequencing playbook</h3>
+          <ul id="sequence-plays"></ul>
+        </article>
+        <article class="interaction-card">
+          <h3>Battlefield roles</h3>
+          <ul id="battlefield-roles"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="personas" class="section alt">
+      <div class="section-head">
+        <p class="eyebrow">Command Roster</p>
+        <h2>Seven BCM AI commanders</h2>
+        <p class="section-lede">Each persona carries a precise mandate, tone discipline, and escalation rubric. Use the toggles to review their operating briefs.</p>
+      </div>
+      <div class="persona-grid" id="persona-grid"></div>
+    </section>
+
+    <section id="gemini" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Gemini Integration</p>
+        <h2>Prompt console (stubbed)</h2>
+        <p class="section-lede">Front-end form posts to a Vercel API route for Gemini. Until the key is configured, responses are simulated for interface testing.</p>
+      </div>
+      <div class="console-card">
+        <form id="gemini-form" novalidate>
+          <div class="commander-select-row">
+            <label for="commander-select" class="console-label">Select Commander</label>
+            <select id="commander-select" name="commander">
+              <option value="barca">Hannah Barca — Strategic Terrain Advisor</option>
+              <option value="coach-mike">Coach Mike — Sales Execution Commander</option>
+              <option value="marvin">Marvin — Profit Analyst & Margin Coach</option>
+              <option value="traci">Traci — CARE™ Communication Commander</option>
+              <option value="woodson">Woodson — Research & Archive Commander</option>
+              <option value="starta">Starta — Foundations & Training Commander</option>
+              <option value="liv">Lïv — PR & Narrative Commander</option>
+            </select>
+          </div>
+          <label for="gemini-prompt" class="console-label">Battlefield request</label>
+          <textarea id="gemini-prompt" name="prompt" rows="5" placeholder="Example: Draft a War Table brief for a rent spike at our flagship store."></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn">Send to Gemini</button>
+            <p class="form-note">Backend call routes to <code>/api/gemini</code>. Configure <code>GEMINI_API_KEY</code> before production.</p>
+          </div>
+        </form>
+        <div class="console-output" id="gemini-output" aria-live="polite">
+          <p class="placeholder">Responses will appear here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-logo">BCM PDM System</p>
+      <p>Hosted on Firebase and Vercel; Gemini proxy runs serverless (Vercel live, Firebase Functions queued once IAM permissions are resolved) with BCM’s ethical guardrails in place.</p>
+      <div class="footer-actions">
+        <a class="btn ghost" href="#top">Return to top</a>
+        <a class="btn" href="mailto:founder@bcm.ai">Coordinate with the founder</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
